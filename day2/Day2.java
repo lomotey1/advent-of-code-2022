@@ -18,7 +18,7 @@ public class Day2 {
         if (player == opponent)
             result += 3;
 
-        else if (player - opponent == 1 || (player == 1 && opponent == 3))  {
+        else if (player - opponent == 1 || (player == 1 && opponent == 3)) {
             result += 6;
         }
 
@@ -30,22 +30,22 @@ public class Day2 {
         int opponent = Integer.parseInt(game.substring(0, 1));
         int gameOutcome = Integer.parseInt(game.substring(2));
 
-        switch(gameOutcome){
-            case 1: //lose
-            if (opponent == 1)
-            result += 3;
-        else 
-            result += (opponent - 1);
-        break;
-            case 2: //draw
+        switch (gameOutcome) {
+            case 1: // lose
+                if (opponent == 1)
+                    result += 3;
+                else
+                    result += (opponent - 1);
+                break;
+            case 2: // draw
                 result += 3;
                 result += opponent;
                 break;
-            case 3: //win
+            case 3: // win
                 result += 6;
                 if (opponent == 3)
                     result += 1;
-                else 
+                else
                     result += (opponent + 1);
                 break;
             default:
@@ -53,6 +53,7 @@ public class Day2 {
         }
         return result;
     }
+
     public static void main(String[] args) throws FileNotFoundException, IOException {
         BufferedReader reader = new BufferedReader(new FileReader("day2/input.txt"));
 
