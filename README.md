@@ -1,2 +1,5 @@
 # advent-of-code-2022
-Advent of Code solutions
+My Advent of Code solutions. 
+
+Problems here: https://adventofcode.com/2022
+
